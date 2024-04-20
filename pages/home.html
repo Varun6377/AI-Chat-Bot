@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Chat Bot</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-[Nunito]">
+    <div class="flex justify-center items-center mt-4 md:mt-0 overflow-y-auto">
+      <!-- Main content -->
+      <div
+        class="bg-white flex flex-col justify-center items-center space-y-4 md:space-y-12 md:w-3/5"
+      >
+        <!-- Introduction -->
+        <div class="flex flex-col items-center space-y-2">
+          <div class="font-bold text-xl :text-2xl text-blue-600">
+            Hi! I am Buggy, an AI chat bot.
+          </div>
+          <span
+            class="text-center font-medium text-lg md:text-xl text-gray-500 px-4"
+          >
+            Using this software, you can ask your questions and receive articles
+            using artificial intelligence assistant.
+          </span>
+        </div>
+        <!-- Image -->
+        <img
+          class="w-56 md:w-fit"
+          src="../assets/images/frame33.png"
+          alt="theme"
+        />
+        <!-- Instruction -->
+        <div
+          class="text-center font-medium text-lg md:text-xl text-gray-500 px-1"
+        >
+          Feel free to give it a try without an account. Press continue to chat
+          without signing in.
+        </div>
+        <!-- Continue Button -->
+        <a
+          href="chatInterfaceGuest.html"
+          class="rounded-full bg-blue-600 flex justify-center items-center p-2 md:p-3.5 w-72 relative"
+        >
+          <span class="text-center font-bold text-lg md:text-xl text-white">
+            Continue
+          </span>
+          <img
+            src="../assets/images/arrowRight1.png"
+            alt="arrow"
+            class="absolute right-0 mr-2"
+          />
+        </a>
+        <!-- This section will be displaying for screens which are more than medium breakpoint -->
+        <div class="md:hidden space-y-5">
+          <!-- Continue with Google Button -->
+          <a
+            href="chatInterfaceUser.html"
+            class="bg-white rounded-full border border-solid border-gray-400 flex items-center space-x-1 p-1.5"
+          >
+            <img
+              src="../assets/images/googelLg1.png"
+              alt="Google"
+              class="w-5 h-5 mx-1"
+            />
+            <span class="text-lg"> Continue with Google </span>
+          </a>
+          <!-- Login and Sign up Buttons -->
+          <div class="flex space-x-10">
+            <a
+              href="chatInterfaceUser.html"
+              class="bg-blue-600 rounded-lg flex flex-row justify-center py-1 px-4"
+            >
+              <span class="font-bold text-xl text-white">Login</span>
+            </a>
+            <a
+              href="chatInterfaceUser.html"
+              class="bg-blue-600 rounded-lg flex flex-row justify-center py-1 px-4"
+            >
+              <span class="font-bold text-xl text-white">Sign up</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- This section wont be displaying for screens which are less than medium breakpoint -->
+      <div
+        class="hidden md:flex flex-col justify-center bg-blue-600 h-screen items-center md:w-2/5 space-y-12"
+      >
+        <!-- Logo -->
+        <img
+          src="../assets/images/blueRobotMascotLogoIconDesign675467551Traced11.png"
+          alt="Buggy"
+        />
+        <!-- Login and Sign up Buttons -->
+        <div class="flex flex-row space-x-10">
+          <a
+            href="chatInterfaceUser.html"
+            class="rounded-lg border border-solid border-white flex flex-row justify-center py-2 px-6"
+          >
+            <span class="font-bold text-xl text-white">Login</span>
+          </a>
+          <a
+            href="chatInterfaceUser.html"
+            class="rounded-lg border border-solid border-white flex flex-row justify-center py-2 px-6"
+          >
+            <span class="font-bold text-xl text-white">Sign up</span>
+          </a>
+        </div>
+        <!-- OR -->
+        <span class="m-2 font-bold text-lg text-white">OR</span>
+        <!-- Continue with Google Button -->
+        <a
+          href="chatInterfaceUser.html"
+          class="rounded-full border border-solid border-gray-400 bg-white m-1 flex items-center p-3"
+        >
+          <img
+            src="../assets/images/googelLg1.png"
+            alt="Google"
+            class="w-6 h-6"
+          />
+          <span class="ml-2 font-medium text-xl"> Continue with Google </span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

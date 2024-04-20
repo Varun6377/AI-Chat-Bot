@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat Interface - User</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inline Styles -->
+    <style>
+      /*To hide scrollbar */
+      .overflow-y-auto::-webkit-scrollbar {
+        width: 0;
+      }
+      .overflow-y-auto {
+        scrollbar-width: none;
+      }
+      /*To ensure sidebar is above other elements */
+      #sidebar {
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body class="font-Nunito flex">
+    <!-- Sidebar -->
+    <aside
+      class="h-screen md:w-72 bg-blue-600 w-64 space-y-6 py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out"
+      id="sidebar"
+    >
+      <!-- Search Bar -->
+      <div class="rounded-full bg-white flex mx-4 p-2">
+        <img src="../assets/images/search1.png" alt="search" />
+        <span class="font-bold text-md text-gray-500 ml-2"> Search... </span>
+      </div>
+      <!-- New Chat Button -->
+      <div class="flex justify-center">
+        <div class="rounded-lg bg-white mb-2 flex items-center space-x-2 p-2">
+          <img
+            class="w-4"
+            src="../assets/images/blueRobotMascotLogoIconDesign675467551Traced1.png"
+            alt="logo"
+          />
+          <span class="font-bold text-lg text-blue-600 cursor-pointer">
+            New Chat
+          </span>
+        </div>
+      </div>
+      <!-- Recent Chats -->
+      <div class="border-t border-white"></div>
+      <div class="font-bold ml-4 text-xl text-white">Recent chats</div>
+      <div class="rounded-lg bg-white flex flex-row justify-center mx-1">
+        <span
+          class="font-bold text-sm md:text-base text-gray-500 p-1 cursor-pointer"
+        >
+          Paris landmarks and restaurants
+        </span>
+      </div>
+      <!-- User Info -->
+      <div class="absolute bottom-0 w-full">
+        <div class="border-t border-white"></div>
+        <div class="flex items-center mb-1 md:ml-2">
+          <img
+            class="w-7 h-7 rounded-full m-2"
+            src="../assets/images/user1.jpeg"
+          />
+          <div class="font-bold text-lg md:text-lg text-white mr-16 md:mr-20">
+            Stella Jones
+          </div>
+          <img
+            class="cursor-pointer"
+            src="../assets/images/more.png"
+            alt="more"
+          />
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex flex-col flex-1">
+      <!-- Navbar -->
+      <nav class="flex justify-between bg-white px-4">
+        <div class="flex ml-4">
+          <img
+            class="mt-2 mr-1 w-6 h-6"
+            src="../assets/images/blueRobotMascotLogoIconDesign675467551Traced1.png"
+            alt="robot"
+          />
+          <div class="flex flex-col mt-1">
+            <span class="font-bold text-2xl text-blue-600"> Buggy </span>
+            <div class="flex items-center gap-x-1">
+              <span class="rounded-full bg-green-500 w-2 h-2"></span>
+              <span class="font-bold text-md text-green-500"> Online </span>
+            </div>
+          </div>
+        </div>
+        <div class="flex mr-5 items-center absolute right-0">
+          <img
+            class="m-4 mr-8 w-6 h-6 cursor-pointer"
+            src="../assets/images/volumeHigh1.png"
+            alt="volume"
+          />
+          <button id="mobileMenuButton">
+            <img
+              id="menuButton"
+              class="block md:hidden ml-2 w-8 h-8 ml-1"
+              src="../assets/images/menu1.png "
+              alt="menu"
+            />
+          </button>
+        </div>
+      </nav>
+
+      <!-- Chat Messages -->
+      <div class="flex flex-col flex-1 mx-4">
+        <div class="overflow-y-auto flex-1 md:mx-20 max-h-[80vh]">
+          <!-- Message 1 -->
+          <div class="flex justify-end">
+            <div
+              class="bg-blue-600 rounded-l-2xl rounded-b-2xl p-3 text-white mt-6"
+            >
+              <span class="font-semibold text-md">
+                What are some good restaurants in Paris?
+              </span>
+            </div>
+          </div>
+          <!-- Response 1 -->
+          <div class="bg-gray-200 p-4 mt-4 rounded-xl">
+            <span class="font-semibold text-md text-gray-600">
+              Here are the some must-visit locations of Paris:
+              <ol class="list-decimal pl-6">
+                <li>Eiffel Tower</li>
+                <li>Louvre Museum</li>
+                <li>Notre-Dame Cathedral</li>
+                <li>Montmartre</li>
+                <li>Champs-Élysées</li>
+                <li>Sainte-Chapelle</li>
+                <li>Musée d'Orsay</li>
+                <li>Latin Quarter</li>
+                <li>Palace of Versailles</li>
+              </ol>
+            </span>
+          </div>
+          <!-- Message 2 -->
+          <div class="flex justify-end">
+            <div
+              class="bg-blue-600 rounded-l-2xl rounded-b-2xl p-3 text-white mt-6"
+            >
+              <span class="font-semibold text-md">
+                What are some good restaurants in Paris?
+              </span>
+            </div>
+          </div>
+          <!-- Response 2 -->
+          <div class="bg-gray-200 p-4 mt-4 rounded-xl">
+            <span class="font-semibold text-md text-gray-600">
+              Here are some noteworthy restaurants in Paris:
+              <ol class="list-decimal pl-6">
+                <li>Le Cinq</li>
+                <li>Septime</li>
+                <li>Le Chateaubriand</li>
+                <li>L'Astrance</li>
+                <li>Arpège</li>
+                <li>Alléno Paris au Pavillon Ledoyen</li>
+                <li>Le Bernardin</li>
+                <li>Pierre Gagnaire</li>
+                <li>Guy Savoy</li>
+              </ol>
+            </span>
+          </div>
+        </div>
+
+        <!-- Message Input -->
+        <div
+          class="p-2 w-full flex items-center rounded-full border border-solid border-gray-400 mt-auto mb-4"
+        >
+          <span class="m-1 ml-4 font-bold text-md text-gray-500">
+            Ask your question here...
+          </span>
+          <img
+            class="ml-auto flex w-4 cursor-pointer"
+            src="../assets/vectors/send.svg"
+            alt="send"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Coded file for Sidebar toggling functionality -->
+    <script src="../index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat Interface - Guest</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <style>
+      /*To hide horizontal scrollbar */
+      .overflow-x-auto::-webkit-scrollbar {
+        width: 0;
+      }
+      .overflow-x-auto {
+        scrollbar-width: none;
+      }
+      /*To ensure sidebar is above other elements */
+      #sidebar {
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body class="font-Nunito flex">
+    <!-- Sidebar -->
+    <aside
+      class="h-screen md:w-72 bg-blue-600 w-60 space-y-6 py-7 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out"
+      id="sidebar"
+    >
+      <!-- Search bar -->
+      <div class="rounded-full bg-white flex mx-4 p-2">
+        <img src="../assets/images/search1.png" alt="search" />
+        <span class="font-bold text-md text-gray-500 ml-2"> Search... </span>
+      </div>
+      <!-- New Chat button -->
+      <div class="flex justify-center">
+        <div class="rounded-lg bg-white mb-2 flex items-center space-x-2 p-2">
+          <img
+            class="w-4"
+            src="../assets/images/blueRobotMascotLogoIconDesign675467551Traced1.png"
+            alt="logo"
+          />
+          <span class="font-bold text-lg text-blue-600 cursor-pointer">
+            New Chat
+          </span>
+        </div>
+      </div>
+      <!-- Divider -->
+      <div class="border-t border-white"></div>
+      <!-- Login, Sign Up, and Continue with Google buttons -->
+      <div class="absolute bottom-0 right-0 w-full">
+        <div class="border-t border-white"></div>
+        <div class="flex flex-row justify-center gap-x-10 items-center mt-4">
+          <a
+            href="chatInterfaceUser.html"
+            class="rounded-lg border border-solid border-white flex flex-row justify-center py-1 px-4"
+          >
+            <span class="font-semibold text-lg text-white">Login</span>
+          </a>
+          <a
+            href="chatInterfaceUser.html"
+            class="rounded-lg border border-solid border-white flex flex-row justify-center py-1 px-2.5"
+          >
+            <span class="font-semibold text-lg text-white">Sign up</span>
+          </a>
+        </div>
+        <a
+          href="chatInterfaceUser.html"
+          class="rounded-full border border-solid border-gray-400 bg-white mr-4 ml-4 mt-4 mb-4 flex items-center p-2.5"
+        >
+          <img
+            src="../assets/images/googelLg1.png"
+            alt="Google"
+            class="w-5 h-5 ml-2"
+          />
+          <span class="ml-4 font-medium text-sm md:text-base">
+            Continue with Google
+          </span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex flex-col flex-1 h-screen">
+      <!-- Navbar -->
+      <nav class="flex justify-between bg-white px-4 py-2">
+        <!-- Logo and Online Status -->
+        <div class="flex ml-4">
+          <img
+            class="mt-2 mr-1 w-6 h-6"
+            src="../assets/images/blueRobotMascotLogoIconDesign675467551Traced1.png"
+            alt="robot"
+          />
+          <div class="flex flex-col mt-1">
+            <span class="font-bold text-2xl text-blue-600"> Buggy </span>
+            <div class="flex items-center gap-x-1">
+              <span class="rounded-full bg-green-500 w-2 h-2"></span>
+              <span class="font-bold text-md text-green-500"> Online </span>
+            </div>
+          </div>
+        </div>
+        <!-- Volume and Mobile Menu Button -->
+        <div class="flex mr-5 items-center absolute right-0">
+          <img
+            class="m-4 mr-8 w-6 h-6 cursor-pointer"
+            src="../assets/images/volumeHigh1.png"
+            alt="volume"
+          />
+          <button id="mobileMenuButton">
+            <img
+              id="menuButton"
+              class="block md:hidden ml-2 w-8 h-8 ml-1"
+              src="../assets/images/menu1.png"
+              alt="menu"
+            />
+          </button>
+        </div>
+      </nav>
+
+      <!-- Content Section -->
+      <div class="flex items-center justify-center flex-1 md:mt-0">
+        <div class="flex justify-center mx-4">
+          <div
+            class="bg-blue-600 rounded-full w-20 flex items-center justify-center"
+          >
+            <img
+              src="../assets/images/blueRobotMascotLogoIconDesign675467551Traced11.png"
+              alt="Buggy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div
+          class="flex flex-row md:flex-col flex-1 ml-4 md:mx-4 mb-4 mt-4 md:mt-0 overflow-x-auto max-w-[94vw]"
+        >
+          <!-- Quick Action Buttons -->
+          <div
+            class="flex justify-center gap-x-2 flex-nowrap md:grid grid-cols-2"
+          >
+            <div
+              class="flex mr-auto justify-center mb-4 w-56 rounded-lg bg-blue-600 p-2 cursor-pointer"
+            >
+              <span class="font-semibold text-base text-white">
+                Explain Quantum physics.
+              </span>
+            </div>
+            <div
+              class="flex ml-auto justify-center mb-4 w-56 rounded-lg bg-blue-600 p-2 cursor-pointer"
+            >
+              <span class="font-semibold text-base text-white">
+                Say “how are you” in French.
+              </span>
+            </div>
+            <div
+              class="flex mr-auto justify-center mb-4 w-56 rounded-lg bg-blue-600 p-2 cursor-pointer"
+            >
+              <span class="font-semibold text-base text-white">
+                Write a poem about love.
+              </span>
+            </div>
+            <div
+              class="flex ml-auto justify-center mb-4 w-56 rounded-lg bg-blue-600 p-2 cursor-pointer"
+            >
+              <span class="font-semibold text-base text-white">
+                Tell a joke about politician.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Input Section -->
+      <div class="flex flex-col mx-4 mt-auto mb-4">
+        <div
+          class="p-2 w-full flex items-center rounded-full border border-solid border-gray-400"
+        >
+          <span class="m-1 ml-4 font-bold text-md text-gray-500">
+            Ask your question here...
+          </span>
+          <img
+            class="ml-auto flex w-4 cursor-pointer"
+            src="../assets/vectors/send.svg"
+            alt="send"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Coded file for Sidebar toggling functionality -->
+    <script src="../index.js"></script>
+  </body>
+</html>
